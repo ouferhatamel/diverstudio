@@ -20,6 +20,7 @@ body {
   background-repeat: repeat;
   color: #006d77;
   font-family: "Gilroy Bold";
+  width: 100%;
 }
 
 h1 {
@@ -173,6 +174,14 @@ a, li {
     top: -500%;
   }
 }
+@keyframes horizMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 #nav {
   display: flex;
   justify-content: space-between;
@@ -229,6 +238,10 @@ a, li {
 }
 #nav .langs .selected:hover {
   transform: scale(1.1);
+}
+
+#mobileNav {
+  display: none;
 }
 
 .hero {
@@ -333,8 +346,15 @@ a, li {
 }
 #services .services-cards {
   display: flex;
+  justify-content: space-between;
   gap: 2rem;
   perspective: 900px;
+}
+#services .services-cards .card-box {
+  width: 100%;
+}
+#services .services-cards .card-box:hover .card {
+  transform: rotateY(180deg);
 }
 #services .services-cards .card {
   position: relative;
@@ -342,7 +362,7 @@ a, li {
   width: 100%;
   height: 10rem;
   border-radius: 10px;
-  transition: all 1s cubic-bezier(0.7, -0.5, 0.3, 1.8);
+  transition: all 0.8s cubic-bezier(0.7, -0.5, 0.3, 1.8);
   cursor: pointer;
 }
 #services .services-cards .card .card-front {
@@ -394,9 +414,6 @@ a, li {
   font-size: 0.8rem;
   text-align: center;
   width: 70%;
-}
-#services .services-cards .card:hover {
-  transform: rotateY(180deg);
 }
 #services .goToTop {
   position: fixed;
@@ -490,6 +507,7 @@ a, li {
   align-items: flex-end;
 }
 #projects .projects-info .project-logo img {
+  transform: translateY(5px);
   width: 6rem;
 }
 #projects .projects-cta {
@@ -530,6 +548,7 @@ a, li {
 }
 
 .testimonials {
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -542,16 +561,16 @@ a, li {
   border-radius: 12px;
   padding: 3rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  overflow: hidden;
 }
 .testimonials .testimonials-box .testimonials-carousel {
   width: 100%;
   display: flex;
-  transition: all 0.4s ease;
+  overflow: hidden;
 }
 .testimonials .testimonials-box .testimonial {
   width: 100%;
   flex-shrink: 0;
+  transition: all 0.4s ease;
 }
 .testimonials .testimonials-box h3, .testimonials .testimonials-box h4 {
   color: #006d77;
@@ -572,15 +591,16 @@ a, li {
 .clients {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
+  overflow: hidden;
 }
 .clients .clients-line {
   display: flex;
-  justify-content: space-between;
+  gap: 3rem;
+  animation: horizMove 20s linear infinite;
 }
 .clients .clients-line img {
-  width: 5rem;
+  width: 4rem;
 }
 
 footer {
@@ -641,4 +661,146 @@ footer .column3 h5 {
 }
 footer .column3 h5:hover {
   animation: shake 0.5s;
+}
+
+@media only screen and (max-width: 415px) {
+  .section, header, footer {
+    padding: 3.5rem 2rem;
+  }
+  #nav {
+    display: none;
+  }
+  #mobileNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #mobileNav #mobileNav-logo img {
+    width: 3rem;
+  }
+  #mobileNav #mobileNav-btn img {
+    width: 1.3rem;
+  }
+  #mobileNav .mobileNav-menu {
+    background-color: #006d77;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    justify-content: center;
+    transform: translateY(-100vh);
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  #mobileNav .mobileNav-menu #close {
+    width: 1.3rem;
+    position: absolute;
+    top: 3.5rem;
+    left: 3.5rem;
+  }
+  #mobileNav .mobileNav-menu .navLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+  }
+  #mobileNav .mobileNav-menu .navLinks a {
+    color: #ebf5f4;
+  }
+  #mobileNav .mobileNav-menu .navLinks li {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  #mobileNav .mobileNav-menu .callBtn {
+    background-color: #f6bd35;
+    padding: 0.5rem;
+    border-radius: 50%;
+    animation: scale 1.5s infinite;
+  }
+  #mobileNav .mobileNav-menu .callBtn img {
+    animation: shake 0.5s infinite;
+    width: 2rem;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: aqua;
+  }
+  .hero .hero-left h1 {
+    margin-bottom: 4rem;
+  }
+  .hero .hero-left .hero-services {
+    height: 40px;
+  }
+  .hero .hero-left h2 {
+    -webkit-text-stroke-color: #006d77;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.05rem;
+    margin-bottom: 5px;
+    transform: translateY(-1rem);
+    position: relative;
+    font-size: 2em;
+    animation: slide-down 7s infinite;
+  }
+  .hero .hero-left .cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 5rem;
+  }
+  .hero .hero-left .cta .cta-quote {
+    background-color: transparent;
+  }
+  .hero .hero-left .cta .cta-quote:hover {
+    background-color: #006d77;
+  }
+  .hero .hero-left .cta .cta-call {
+    background-color: #f6bd35;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: scale 1.5s infinite;
+  }
+  .hero .hero-left .cta .cta-call img {
+    width: 1.5rem;
+    animation: shake 0.5s infinite;
+  }
+  .hero .hero-left .cta .cta-call:active {
+    background-color: white;
+  }
+  .hero .hero-right {
+    flex: 1;
+  }
+  .hero .hero-right .hero-image img {
+    max-width: 120%;
+    animation-name: float;
+    animation-duration: 3s; /* set the duration of the animation */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  #services {
+    display: none;
+  }
+  #projects {
+    display: none;
+  }
+  .slogan {
+    display: none;
+  }
+  .testimonials {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

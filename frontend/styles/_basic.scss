@@ -30,6 +30,7 @@ body{
     background-repeat: repeat;
     color: $dark_clr;
     font-family: 'Gilroy Bold';
+    width: 100%;
 }
 h1{
     font-family: 'Gilroy Bold';
@@ -173,6 +174,14 @@ a, li {
     top: -500%;
   }
   
+}
+@keyframes horizMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
   

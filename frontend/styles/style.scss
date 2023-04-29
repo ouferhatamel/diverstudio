@@ -1,6 +1,5 @@
 @import 'basic';
 
-
 #nav{
     display: flex;
     justify-content: space-between;
@@ -59,6 +58,9 @@
             }
         }
     }
+}
+#mobileNav{
+    display: none;
 }
 .hero{
     display: flex;
@@ -160,15 +162,22 @@
     }
     .services-cards{
         display: flex;
+        justify-content: space-between;
         gap: 2rem;
         perspective: 900px;
+        .card-box{
+            width: 100%;
+            &:hover .card{
+                transform: rotateY(180deg);
+            }
+        }
         .card{
             position: relative;
             transform-style: preserve-3d;
             width: 100%;
             height: 10rem;
             border-radius: 10px;
-            transition: all 1s cubic-bezier(.7, -.5, .3, 1.8);
+            transition: all .8s cubic-bezier(.7, -.5, .3, 1.8);
             cursor: pointer;
             .card-front{
                 background-color: white;
@@ -221,9 +230,6 @@
                     text-align: center;
                     width: 70%;
                 }
-            }
-            &:hover{
-                transform: rotateY(180deg);
             }
         }
     }
@@ -319,6 +325,7 @@
         align-items: flex-end;
         .project-logo{
             img{
+                transform: translateY(5px);
                 width: 6rem;
             }
         }
@@ -358,6 +365,7 @@
     }
 }
 .testimonials{
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -369,15 +377,15 @@
         border-radius: 12px;
         padding: 3rem;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        overflow: hidden;
         .testimonials-carousel{
             width: 100%;
             display: flex;
-            transition: all 0.4s ease;
+            overflow: hidden;
         }
         .testimonial{
             width: 100%;
             flex-shrink: 0;
+            transition: all 0.4s ease;
         }
         h3, h4 {
             color: $dark_clr;
@@ -399,13 +407,14 @@
 .clients{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
+    overflow: hidden;
     .clients-line{
         display: flex;
-        justify-content: space-between;
+        gap: 3rem;
+        animation: horizMove 20s linear infinite;
         img{
-            width: 5rem;
+            width: 4rem;
         }
     }
 }
@@ -477,4 +486,154 @@ footer{
             }
         }
     }   
+}
+
+// Responsive
+@media only screen and (max-width: 415px){
+    .section, header, footer{
+        padding: 3.5rem 2rem;
+    }
+    #nav{
+        display: none;
+    }
+    #mobileNav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #mobileNav-logo{
+            img{
+                width: 3rem;
+            }
+        }
+        #mobileNav-btn{
+            img{
+                width: 1.3rem
+            }
+        }
+        .mobileNav-menu{
+            background-color: $dark_clr;
+            position: absolute;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5rem;
+            justify-content: center;
+            transform: translateY(-100vh);
+            transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+            #close{
+                width: 1.3rem;
+                position: absolute;
+                top: 3.5rem;
+                left: 3.5rem;
+            }
+            .navLinks{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                list-style: none;
+                a{
+                    color: $light_clr;
+                }
+                li{
+                    text-align: center;
+                    font-size: 1.1rem;
+                }
+            }
+            .callBtn{
+                background-color: $middle_clr;
+                padding: .5rem;
+                border-radius: 50%;
+                animation: scale 1.5s infinite;
+                img{
+                    animation: shake .5s infinite;
+                    width: 2rem;
+                }
+            }
+        }
+    }
+    .hero{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-color: aqua;
+        .hero-left{
+            h1{
+                margin-bottom: 4rem;
+            }
+            .hero-services{
+                height: 40px;
+            }
+            h2{
+                -webkit-text-stroke-color: $dark_clr;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: .05rem;
+                margin-bottom: 5px;
+                transform: translateY(-1rem);
+                position: relative;
+                font-size: 2em;
+                animation: slide-down 7s infinite;
+            }
+            .cta{
+                display: flex;
+                gap: 1.5rem;
+                margin-top: 5rem;
+                .cta-quote{
+                    background-color: transparent;
+                &:hover{
+                    background-color: $dark_clr;
+                }
+                }
+                .cta-call{
+                    background-color: $middle_clr;
+                    width: fit-content;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    animation: scale 1.5s infinite;
+                    img{
+                        width: 1.5rem;
+                        animation: shake .5s infinite;
+                    }
+                    &:active{
+                        background-color: white;
+                    }
+                }
+            }
+        }
+        .hero-right{
+            flex: 1;
+            .hero-image{
+                img{
+                    max-width: 120%;
+                    animation-name: float;
+                    animation-duration: 3s; /* set the duration of the animation */
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                }
+            }
+        }
+    }
+    #services{
+        display: none;
+    }
+    #projects{
+        display: none;
+    }
+    .slogan{
+        display: none;
+    }
+    .testimonials{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
 }

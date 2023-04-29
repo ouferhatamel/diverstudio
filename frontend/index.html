@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="res/svg/diver-studio-web-design-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
     <title>Diver Studio - Web Design, Branding, Graphic design, Social Media</title>
@@ -13,7 +13,7 @@
     <header>
         <!-- Navigation -->
         <nav id="nav">
-            <a href= "#nav" class="logo">
+            <a href="#nav" class="logo">
                 <img src="res/svg/diver-studio-web-design-logo.svg" alt="diver-studio-logo">
             </a>
             <ul class="navLinks">
@@ -27,6 +27,28 @@
                 <li class="Ar">Ar</li>
                 <li class="Fr">Fr</li>
             </ul>
+        </nav>
+        <!-- Mobile navigation -->
+        <nav id="mobileNav">
+            <div id="mobileNav-logo">
+                <img src="res/svg/diver-studio-web-design-logo.svg" alt="diver-studio-logo">
+            </div>
+            <div id="mobileNav-btn">
+                <img src="res/svg/diver-studio-hamburger-menu.svg" alt="menu-button">
+            </div>
+            <div class="mobileNav-menu">
+                <img id="close" src="res/svg/diver-studio-close-icon.svg" alt="close">
+                <ul class="navLinks">
+                    <a href="#services"><li data-translate="services">SERVICES</li></a>
+                    <a href="#projects"><li data-translate="projects">PROJECTS</li></a>
+                    <a href="#diver-shop"><li data-translate="shop">SHOP</li></a>
+                    <a href="#contact"><li data-translate="contact">CONTACT</li></a>
+                </ul>
+                <div class="callBtn">
+                    <a href="tel:+213 540 18 89 14"><img src="res/svg/diver-studio-phone-white-icon.svg" alt="diver-studio-phone-icon"></a>
+                    
+                </div>
+            </div>
         </nav>
         <!-- Hero -->
         <div class="hero">
@@ -45,7 +67,7 @@
                 <div class="cta">
                     <div data-translate="free quote" class="cta-quote button">FREE QUOTE</div>
                     <a href="tel:+213540188914" class="cta-call">
-                        <img src="res/svg/diver-studio-phonecall-icon.svg" alt="diver-studio-phonecall-icon">
+                        <img src="res/svg/diver-studio-phone-icon.svg" alt="diver-studio-phonecall-icon">
                     </a>
                 </div>
             </div>
@@ -81,7 +103,8 @@
         </div>
         <!-- Services cards -->
         <div class="services-cards">
-            <div class="card">
+            <div class="card-box">
+                <div class="card">
                 <div class="card-front">
                     <div class="card-icon">
                         <img src="res/images/diver-studio-web-halo.png" alt="">
@@ -93,7 +116,9 @@
                     <p data-translate="web description">Vitrine Website • E-commerce • Landing page • Catalog • SEO • Maintenance</p>
                 </div>
             </div>
-            <div class="card">
+            </div>
+            <div class="card-box">
+                <div class="card">
                 <div class="card-front">
                     <div class="card-icon">
                         <img src="res/images/diver-studio-web-halo.png" alt="">
@@ -105,7 +130,9 @@
                     <p data-translate="web description">Naming • Logo design • Graphic charter • Corporate design • Rebranding</p>
                 </div>
             </div>
-            <div class="card">
+            </div>
+            <div class="card-box">
+                <div class="card">
                 <div class="card-front">
                     <div class="card-icon">
                         <img src="res/images/diver-studio-web-halo.png" alt="">
@@ -117,7 +144,9 @@
                     <p data-translate="web description">Email template design • Emailing campain</p>
                 </div>
             </div>
-            <div class="card">
+            </div>
+            <div class="card-box">
+                <div class="card">
                 <div class="card-front">
                     <div class="card-icon">
                         <img src="res/images/diver-studio-web-halo.png" alt="">
@@ -129,6 +158,7 @@
                     <p data-translate="web description">Social media graphics</p>
                 </div>
             </div>
+            </div>   
         </div>
         <!-- Go to top -->
         <a href="#nav" class="goToTop">
@@ -147,7 +177,7 @@
             <div class="leftBtn navigationBtn">
                 <img src="res/svg/diver-studio-rightLeft-arrow-icon.svg" alt="previous">
             </div>
-            <div class="rightBtn navigationBtn">
+            <div id="next" class="rightBtn navigationBtn">
                 <img src="res/svg/diver-studio-rightLeft-arrow-icon.svg" alt="previous">
             </div>
         </div>
@@ -253,7 +283,22 @@
                 <div class="testimonial">
                     <h3>Samir Dib</h3>
                     <h4>NUMIDIA LAND - CHEF DE PROJET</h4>
-                    <p>"I had the pleasure of working with Diver Studio for the development of my website, and I couldn't be happier with the results. Amel and her team were professional, attentive to my needs, and creative in their approach. I would highly recommend Diver Studio to anyone looking for a reliable and talented web development team."</p>
+                    <p>"Je suis très satisfait de mon expérience avec Amel pour la création de mon branding. Elle a su comprendre mes besoins et mes attentes, et a créé un logo et une identité visuelle qui correspondent parfaitement à mon projet. Je recommande vivement les services de Diver Studio pour tous vos besoins en branding et design."</p>
+                </div>
+                <div class="testimonial">
+                    <h3>Serge Tagliaboschi</h3>
+                    <h4>SERGE TAGLIABOSCHI GROUP - ASSOCIE - CEO</h4>
+                    <p>"Diver Studio a su répondre à toutes mes attentes en matière de design et developpement WEB. Leur travail a été professionnel, créatif et livré dans les temps impartis."</p>
+                </div>
+                <div class="testimonial">
+                    <h3>Hakim Attal</h3>
+                    <h4>HIKMA - FOUNDER</h4>
+                    <p>"Professionalisme. Créativité. Qualité"</p>
+                </div>
+                <div class="testimonial">
+                    <h3>Roger Mathey</h3>
+                    <h4>DUBAI GO SKYDIVE - COMMUNICATION MANAGER</h4>
+                    <p>"I cannot express my satisfaction enough. The work done by Amel through Diver Studio exceeded my expectations. Everything was done according to my requirements and I found a solution for everything. Amel paid attention to all the details and was very helpful in answering all the questions and queries I had. Thank you again for your work. I look forward to working with you again."</p>
                 </div>
             </div>
         </div>
@@ -266,13 +311,25 @@
                 <img src="res/svg/diver-studio-wtig-monochrome-logo.svg" alt="diver-studio-wtig-logo">
                 <img src="res/svg/diver-studio-helloschool-monochrome-logo.svg" alt="diver-studio-hello-school-logo">
                 <img src="res/svg/diver-studio-st-group-monochrome-logo.svg" alt="diver-studio-st-group-logo">
-            </div>
-            <div class="clients-line">
                 <img src="res/svg/diver-studio-st-home-monochrome-logo.svg" alt="diver-studio-st-home-logo">
                 <img src="res/svg/diver-studio-craftygram-monochrome-logo.svg" alt="diver-studio-craftygram-logo">
-                <img src="res/svg//diver-studio-renovandco-monochrome-logo.svg" alt="diver-studio-renovandco-logo">
+                <img style="width: 6rem" src="res/svg//diver-studio-renovandco-monochrome-logo.svg" alt="diver-studio-renovandco-logo">
                 <img src="res/svg/diver-studio-numidia-land-monochrome-logo.svg" alt="diver-studio-numidia-land-logo">
-                <img src="res/svg/diver-studio-sergetagliaboschi-monochrome-logo.svg" alt="diver-serge-tagliaboschi-land-logo">
+                <img style="width: 10rem" src="res/svg/diver-studio-sergetagliaboschi-monochrome-logo.svg" alt="diver-serge-tagliaboschi-land-logo">
+                <img src="res/svg/diver-studio-playzone-monochrome-logo.svg" alt="diver-studio-playzone-logo">
+            </div>
+            <div class="clients-line">
+                <img src="res/svg/diver-studio-hikma-monochrome-logo.svg" alt="diver-studio-hikma-logo">
+                <img src="res/svg/diver-studio-elmizen-monochrome-logo.svg" alt="diver-studio-elmizen-logo">
+                <img src="res/svg/diver-studio-dubai-goskydive-monochrome-logo.svg" alt="diver-studio-goskydive-logo">
+                <img src="res/svg/diver-studio-wtig-monochrome-logo.svg" alt="diver-studio-wtig-logo">
+                <img src="res/svg/diver-studio-helloschool-monochrome-logo.svg" alt="diver-studio-hello-school-logo">
+                <img src="res/svg/diver-studio-st-group-monochrome-logo.svg" alt="diver-studio-st-group-logo">
+                <img src="res/svg/diver-studio-st-home-monochrome-logo.svg" alt="diver-studio-st-home-logo">
+                <img src="res/svg/diver-studio-craftygram-monochrome-logo.svg" alt="diver-studio-craftygram-logo">
+                <img style="width: 10rem" src="res/svg//diver-studio-renovandco-monochrome-logo.svg" alt="diver-studio-renovandco-logo">
+                <img src="res/svg/diver-studio-numidia-land-monochrome-logo.svg" alt="diver-studio-numidia-land-logo">
+                <img style="width: 10rem" src="res/svg/diver-studio-sergetagliaboschi-monochrome-logo.svg" alt="diver-serge-tagliaboschi-land-logo">
                 <img src="res/svg/diver-studio-playzone-monochrome-logo.svg" alt="diver-studio-playzone-logo">
             </div>
         </div>
