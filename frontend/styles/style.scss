@@ -490,8 +490,32 @@ footer{
 
 // Responsive
 @media only screen and (max-width: 415px){
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+    }
     .section, header, footer{
-        padding: 3.5rem 2rem;
+        padding: 2.5rem 2rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h4{
+        line-height: 1.6;
+    }
+    p{
+        font-size: .9rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+    .button{
+        padding: 1rem;
     }
     #nav{
         display: none;
@@ -529,7 +553,7 @@ footer{
                 width: 1.3rem;
                 position: absolute;
                 top: 3.5rem;
-                left: 3.5rem;
+                right: 2rem;
             }
             .navLinks{
                 display: flex;
@@ -560,80 +584,159 @@ footer{
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        background-color: aqua;
         .hero-left{
             h1{
-                margin-bottom: 4rem;
-            }
-            .hero-services{
-                height: 40px;
-            }
-            h2{
-                -webkit-text-stroke-color: $dark_clr;
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke-width: .05rem;
-                margin-bottom: 5px;
-                transform: translateY(-1rem);
-                position: relative;
-                font-size: 2em;
-                animation: slide-down 7s infinite;
+                margin-bottom: 2.5rem;
             }
             .cta{
                 display: flex;
-                gap: 1.5rem;
-                margin-top: 5rem;
-                .cta-quote{
-                    background-color: transparent;
-                &:hover{
-                    background-color: $dark_clr;
-                }
-                }
-                .cta-call{
-                    background-color: $middle_clr;
-                    width: fit-content;
-                    padding: 1rem;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    cursor: pointer;
-                    animation: scale 1.5s infinite;
-                    img{
-                        width: 1.5rem;
-                        animation: shake .5s infinite;
-                    }
-                    &:active{
-                        background-color: white;
-                    }
-                }
+                justify-content: space-between;
+                gap: inherit;
+                margin-top: 2.5rem;
             }
         }
         .hero-right{
-            flex: 1;
             .hero-image{
                 img{
-                    max-width: 120%;
-                    animation-name: float;
-                    animation-duration: 3s; /* set the duration of the animation */
-                    animation-iteration-count: infinite;
-                    animation-timing-function: ease-in-out;
+                    max-width: 100%;
                 }
+            }
+        }
+    }
+    .sm{
+        align-self: flex-start;
+        img{
+            height: 1rem;
+            &:nth-child(3){
+                height: .8rem;
             }
         }
     }
     #services{
-        display: none;
+        .services-header{
+            flex-direction: column;
+            justify-content: inherit;
+            align-items: inherit;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            .services-description{
+                p{
+                    width: 100%;
+                    float: inherit;
+                }
+            }
+        }
+        .services-cards{
+            flex-direction: column;
+            justify-content: center;
+        }
+        .goToTop{
+            bottom: 2rem;
+            right: 2rem;
+        }
     }
     #projects{
-        display: none;
+        .projects-slideBtns{
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            .navigationBtn{
+                width: 2.5rem;
+                height: 2.5rem;
+                border: 1.8px solid $dark_clr;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all .5s ease;
+                cursor: pointer;
+                img{
+                    width: .5rem;
+                }
+                &:hover{
+                    background-color: white;
+                }
+            }
+            .leftBtn{
+                img{
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        .projects-slider{
+            width: 18rem;
+            height: 11.5rem;
+            border-radius: 18px;
+        }
+        .projects-infoSlider{
+            width: 18rem;
+            text-align: center;
+        }
+        .projects-info{
+            flex-direction: column;
+            justify-content: inherit;
+            align-items: center;
+            gap: 1rem;
+        }
+        .projects-cta{
+            width: 18rem;
+            margin-top: 0;
+        }
     }
     .slogan{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        .slogan-hero{
+            img{
+                width: 80%;
+            }
+        }
+        .slogan-description{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            p{
+                width: 100%;
+            }
+        }
     }
     .testimonials{
-        display: none;
+        gap: 3rem;
+        .testimonials-box{
+            width: 100%;
+            padding: 3rem 2rem;
+            h3{
+                font-size: 1rem;
+                margin-bottom: .5rem;
+            }
+            h4{
+                font-size: .8rem;
+            }
+            p{
+                font-size: .8rem;
+                margin-top: 1rem;
+            }
+        }
     }
     footer{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        .column1{
+            align-items: center;
+            gap: 2rem;
+            #logo{
+                width: 3rem;
+            }
+        }
+        .column2{
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+        }
     }
 }

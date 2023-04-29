@@ -32,7 +32,7 @@ function autoProjectSlide(){
     intervalId = setInterval(() => slideImage(++imageIndex), 2000);
 }
 function autoTestimonialSlide(){
-    intervalId2 = setInterval(() => slideTestimonials(++testimonialIndex), 2000);
+    intervalId2 = setInterval(() => slideTestimonials(++testimonialIndex), 3000);
 }
 // Slide project images
 function slideImage(){

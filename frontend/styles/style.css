@@ -664,8 +664,32 @@ footer .column3 h5:hover {
 }
 
 @media only screen and (max-width: 415px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
   .section, header, footer {
-    padding: 3.5rem 2rem;
+    padding: 2.5rem 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    line-height: 1.6;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .button {
+    padding: 1rem;
   }
   #nav {
     display: none;
@@ -701,7 +725,7 @@ footer .column3 h5:hover {
     width: 1.3rem;
     position: absolute;
     top: 3.5rem;
-    left: 3.5rem;
+    right: 2rem;
   }
   #mobileNav .mobileNav-menu .navLinks {
     display: flex;
@@ -730,77 +754,143 @@ footer .column3 h5:hover {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    background-color: aqua;
   }
   .hero .hero-left h1 {
-    margin-bottom: 4rem;
-  }
-  .hero .hero-left .hero-services {
-    height: 40px;
-  }
-  .hero .hero-left h2 {
-    -webkit-text-stroke-color: #006d77;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 0.05rem;
-    margin-bottom: 5px;
-    transform: translateY(-1rem);
-    position: relative;
-    font-size: 2em;
-    animation: slide-down 7s infinite;
+    margin-bottom: 2.5rem;
   }
   .hero .hero-left .cta {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 5rem;
+    justify-content: space-between;
+    gap: inherit;
+    margin-top: 2.5rem;
   }
-  .hero .hero-left .cta .cta-quote {
-    background-color: transparent;
+  .hero .hero-right .hero-image img {
+    max-width: 100%;
   }
-  .hero .hero-left .cta .cta-quote:hover {
-    background-color: #006d77;
+  .sm {
+    align-self: flex-start;
   }
-  .hero .hero-left .cta .cta-call {
-    background-color: #f6bd35;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 1rem;
+  .sm img {
+    height: 1rem;
+  }
+  .sm img:nth-child(3) {
+    height: 0.8rem;
+  }
+  #services .services-header {
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: inherit;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  #services .services-header .services-description p {
+    width: 100%;
+    float: inherit;
+  }
+  #services .services-cards {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #services .goToTop {
+    bottom: 2rem;
+    right: 2rem;
+  }
+  #projects .projects-slideBtns {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  #projects .projects-slideBtns .navigationBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1.8px solid #006d77;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s ease;
     cursor: pointer;
-    animation: scale 1.5s infinite;
   }
-  .hero .hero-left .cta .cta-call img {
-    width: 1.5rem;
-    animation: shake 0.5s infinite;
+  #projects .projects-slideBtns .navigationBtn img {
+    width: 0.5rem;
   }
-  .hero .hero-left .cta .cta-call:active {
+  #projects .projects-slideBtns .navigationBtn:hover {
     background-color: white;
   }
-  .hero .hero-right {
-    flex: 1;
+  #projects .projects-slideBtns .leftBtn img {
+    transform: rotate(-180deg);
   }
-  .hero .hero-right .hero-image img {
-    max-width: 120%;
-    animation-name: float;
-    animation-duration: 3s; /* set the duration of the animation */
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  #projects .projects-slider {
+    width: 18rem;
+    height: 11.5rem;
+    border-radius: 18px;
   }
-  #services {
-    display: none;
+  #projects .projects-infoSlider {
+    width: 18rem;
+    text-align: center;
   }
-  #projects {
-    display: none;
+  #projects .projects-info {
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: center;
+    gap: 1rem;
+  }
+  #projects .projects-cta {
+    width: 18rem;
+    margin-top: 0;
   }
   .slogan {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  .slogan .slogan-hero img {
+    width: 80%;
+  }
+  .slogan .slogan-description {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .slogan .slogan-description p {
+    width: 100%;
   }
   .testimonials {
-    display: none;
+    gap: 3rem;
+  }
+  .testimonials .testimonials-box {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+  .testimonials .testimonials-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .testimonials .testimonials-box h4 {
+    font-size: 0.8rem;
+  }
+  .testimonials .testimonials-box p {
+    font-size: 0.8rem;
+    margin-top: 1rem;
   }
   footer {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+  }
+  footer .column1 {
+    align-items: center;
+    gap: 2rem;
+  }
+  footer .column1 #logo {
+    width: 3rem;
+  }
+  footer .column2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
