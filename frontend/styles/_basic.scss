@@ -1,0 +1,184 @@
+// Color Variables
+$light_clr: #ebf5f4;
+$dark_clr: #006d77;
+$middle_clr: #f6bd35;
+
+// Reset Spacing
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Fonts
+// Gilroy font
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('../res/fonts/Gilroy-ExtraBold.otf');
+}
+// Montserrat font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+// Predifined elements
+html{
+  scroll-behavior: smooth;
+}
+body{
+    background-color: $light_clr;
+    background-image: url('../res/svg/diver-studio-web-background-dust.svg');
+    background-size: contain;
+    background-repeat: repeat;
+    color: $dark_clr;
+    font-family: 'Gilroy Bold';
+}
+h1{
+    font-family: 'Gilroy Bold';
+    font-size: 3rem;
+}
+h2{
+    font-family: 'Gilroy Bold';
+    font-size: 2rem;
+}
+h3{
+    font-family: 'Gilroy Bold';
+    font-size: 1.5rem;
+    color: $middle_clr;
+}
+h4{
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: $middle_clr;
+}
+p{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    line-height: 1.5;
+}
+.section, header, footer{
+    padding: 3.5rem 10rem;
+}
+a{
+    text-decoration: none;
+    color: $dark_clr;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+a, li {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: .8rem;
+}
+.button{
+    border: 1px solid $dark_clr;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all .5s ease;
+    &:hover{
+      background-color: $dark_clr;
+      color: $light_clr;
+  }
+}
+
+// Scrollbar
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: $light_clr;
+  border-radius: 5px;
+}
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: $dark_clr;
+  border-radius: 5px;
+}
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: $middle_clr;
+}
+
+// Keyframes
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes shake {
+    
+    20% {
+      transform: rotate(5deg);
+    }
+    40% {
+      transform: rotate(-5deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    80% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+@keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1.1);
+    }
+    40% {
+      transform: scale(1.1);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    80% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+@keyframes slide-down {
+  0% {
+    top: 0%;
+  }
+  20% {
+    top: -60%;
+  }
+  40% {
+    top: -200%;
+  }
+  60% {
+    top: -300%;
+  }
+  80% {
+    top: -400%;
+  }
+  100% {
+    top: -500%;
+  }
+  
+}
+
+  
+  
+  
+  
+  
+  
+  
