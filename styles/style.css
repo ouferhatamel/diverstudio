@@ -217,6 +217,7 @@ a, li {
   width: 100%;
 }
 #nav .langs {
+  visibility: hidden;
   padding-bottom: 0.8rem;
 }
 #nav .langs li {
