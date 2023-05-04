@@ -45,7 +45,7 @@ autoTestimonialSlide()
 // Functions déclarations
 // Translate page
 function translatePage(language) {
-    fetch(`/locales/${language}.json`)
+    fetch(`/diverstudio/blob/master/locales/${language}.json`)
       .then(response => response.json())
       .then(data => {
         const elements = document.querySelectorAll('[data-translate]');
